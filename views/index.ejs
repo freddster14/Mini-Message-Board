@@ -7,6 +7,7 @@
       <h2><%= message.user %></h2>
       <p><%= message.text %></p>
       <p><%= message.added %></p>
+      <a href="open/<%= messages.indexOf(message) %>">Open message</a>
     <% } %>
     <a href="/new">Add Message</a>
   </body>

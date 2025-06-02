@@ -16,6 +16,10 @@ const messages = [
 
 indexRouter.get('/', (req, res) => res.render('index', { title: 'Mini Messageboard', messages }));
 indexRouter.get('/new', (req, res) => res.render('form'));
+indexRouter.get('/open/:user', (req, res) => {
+  const { user } = req.params;
+  res.render('message', { message: messages[user]});
+});
 
 indexRouter.post('/new', (req, res) => {
   messages.push({ text: req.body.messageText, user: req.body.messageUser, added: new Date() });
