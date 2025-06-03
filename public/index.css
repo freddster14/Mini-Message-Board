@@ -22,16 +22,21 @@ body {
   row-gap: 45px;
 }
 
+.content a {
+    all: unset;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .note {
-  width: 20%;
-  max-width: 200px;
-  aspect-ratio: 1/1;
-  height: fit-content;
+  width: clamp(100px, 15vw, 200px);
+  aspect-ratio: 1 / 1;
   background-color: #fff8a6;
   display: inline-block;
-  padding: 2vw;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.329);
-  font-size: 1.5vw;
+  font-size: 1.7vw;
+  padding: 2vw;
   word-wrap: break-word;
 }
 
