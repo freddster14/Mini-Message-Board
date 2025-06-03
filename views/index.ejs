@@ -5,12 +5,13 @@
   </head>
   <body>
     <div class="content">
-      <% for (let message of messages) { %>
-        <div class="note">
-          <h2><%= message.user %></h2>
-          <p><%= message.text %></p>
-          <a href="open/<%= messages.indexOf(message) %>">Open message</a>
-        </div>
+      <% for (let i = messages.length - 1; i > 0; i--) { %>
+        <a href="open/<%= messages.indexOf(i) %>">
+          <div class="note" onclick="">
+            <h2><%= messages[i].user %></h2>
+            <p><%= messages[i].text %></p>
+          </div>
+        </a>
       <% } %>
     <a href="/new">Add Message</a>
     </div>
