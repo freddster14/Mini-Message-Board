@@ -2,4 +2,51 @@
 
 body {
   font-family: "Comic Neue", "Patrick Hand", cursive;
+  min-width: 100%;
+  margin: 0;
+  background-image: url('/bulletin-board-102071_1920.jpg');
+  background-size: 90%;
+  background-position: top;
+  background-repeat: no-repeat;
+  
+}
+
+.content {
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 9vw;
+  gap: 20px;
+  row-gap: 45px;
+}
+
+.note {
+  width: 20%;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  height: fit-content;
+  background-color: #fff8a6;
+  display: inline-block;
+  padding: 2vw;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.329);
+  font-size: 1.5vw;
+  word-wrap: break-word;
+}
+
+.note h2 {
+  margin-top: 0;
+}
+
+.note a {
+  margin-top: 100%;
+}
+
+
+.thanks {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align: center;
 }
