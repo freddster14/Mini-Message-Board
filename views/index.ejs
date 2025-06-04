@@ -6,7 +6,7 @@
   <body>
     <div class="content">
       <% for (let i = messages.length - 1; i > 0; i--) { %>
-        <a href="open/<%= messages.indexOf(i) %>">
+        <a href="open/<%= i %>">
           <div class="note" onclick="">
             <h2><%= messages[i].user %></h2>
             <p><%= messages[i].text %></p>
