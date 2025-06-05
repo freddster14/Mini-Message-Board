@@ -8,3 +8,39 @@ body {
   margin: 0 auto;
   background-repeat: no-repeat;
 }
+
+.note {
+  width: clamp(75px, 15vw, 150px);
+  aspect-ratio: 1 / 1;
+  background-color: #fff8a6;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);  
+  font-size: clamp(8px, 1.5vw, 16px);
+  padding: clamp(10px, 2vw , 22px);  
+  word-wrap: break-word;
+  position: relative;
+}
+
+.note::before {
+  content: "";
+  background-image: radial-gradient(red 50%, black 100%);
+  box-shadow: 0 2px 3px rgba(0,0,0,.25);
+  padding: clamp(5px, 0.7vw, 12px);
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  border-radius: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.note h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.note p {
+  margin: 0;
+}
