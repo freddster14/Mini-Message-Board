@@ -5,12 +5,12 @@ const messages = [
   {
     text: 'Hi there!',
     user: 'Amando',
-    added: new Date(),
+    added: new Date().toLocaleString(),
   },
   {
     text: 'Hello World!',
     user: 'Charles',
-    added: new Date(),
+    added: new Date().toLocaleString(),
   },
 ];
 
@@ -23,7 +23,13 @@ indexRouter.get('/open/:user', (req, res) => {
 
 indexRouter.post('/new', (req, res) => {
   const text = req.body.messageText;
-  messages.push({ text: text.toLowerCase(), user: req.body.messageUser, added: new Date() });
+  messages.push(
+    {
+      text: text.toLowerCase(),
+      user: req.body.messageUser,
+      added: new Date().toLocaleString(),
+    },
+  );
   res.redirect('/');
 });
 

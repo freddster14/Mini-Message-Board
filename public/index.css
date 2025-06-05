@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Patrick+Hand&display=swap');
 
-body {
-  font-family: "Comic Neue", "Patrick Hand", cursive;
-  background-image: url('/bulletin-board-102071_1920.jpg');
-  background-size: contain;
-  background-position: top;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-}
+
 
 .content {
   display: flex;
