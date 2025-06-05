@@ -27,7 +27,7 @@ body {
   content: "";
   background-image: radial-gradient(red 50%, black 100%);
   box-shadow: 0 2px 3px rgba(0,0,0,.25);
-  padding: clamp(5px, 0.7vw, 12px);
+  padding: clamp(5px, 0.7vw, 9px);
   position: absolute;
   top: -4%;
   left: 50%;
