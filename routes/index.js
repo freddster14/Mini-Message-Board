@@ -6,11 +6,13 @@ const messages = [
     text: 'Hi there!',
     user: 'Amando',
     added: new Date().toLocaleString(),
+    color: 2,
   },
   {
     text: 'Hello World!',
     user: 'Charles',
     added: new Date().toLocaleString(),
+    color: 0,
   },
 ];
 
@@ -28,6 +30,7 @@ indexRouter.post('/new', (req, res) => {
       text: text.toLowerCase(),
       user: req.body.messageUser,
       added: new Date().toLocaleString(),
+      color: req.body.noteColor,
     },
   );
   res.redirect('/');

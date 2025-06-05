@@ -10,7 +10,7 @@
     <div class="content">
       <% for (let i = messages.length - 1; i > -1; i--) { %>
         <a href="open/<%= i %>">
-          <div class="note" onclick="">
+          <div class="note" id="color<%= messages[i].color %>">
             <h2><%= messages[i].user %></h2>
             <p><%= messages[i].text %></p>
           </div>

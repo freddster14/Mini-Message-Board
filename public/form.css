@@ -47,3 +47,20 @@ button {
   padding: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.39);
 }
+
+.colors {
+  left: 50%;
+  top: 52vh;
+  transform: translate(-50%, -50%);
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  width: 70%;
+  max-width: 700px;
+}
+
+.color {
+  padding: min(5%, 25px);
+  border-radius: 100%;
+  border: 2px solid rgb(0, 0, 0);
+}
