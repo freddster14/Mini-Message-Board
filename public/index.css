@@ -2,24 +2,23 @@
 
 body {
   font-family: "Comic Neue", "Patrick Hand", cursive;
-  min-width: 100%;
-  margin: 0;
   background-image: url('/bulletin-board-102071_1920.jpg');
-  background-size: 95%;
+  background-size: contain;
   background-position: top;
+  margin: 0 auto;
   background-repeat: no-repeat;
-  
 }
 
 .content {
-  width: 80%;
   display: flex;
-  justify-content: space-evenly;
+  max-width: 700px;
+  width: 82%;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-top: 9vw;
-  gap: 20px;
-  row-gap: 45px;
+  margin-top: min(10vw, 100px);
+  gap: 8%;
+  row-gap: 3vw;
 }
 
 .content a {
@@ -30,15 +29,15 @@ body {
 }
 
 .note {
-  width: clamp(100px, 15vw, 200px);
+  width: clamp(75px, 15vw, 150px);
   aspect-ratio: 1 / 1;
   background-color: #fff8a6;
   display: inline-block;
   box-shadow: 0 3px 6px rgba(0,0,0,.25);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
   -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);  
-  font-size: 1.7vw;
-  padding: 2vw;
+  font-size: clamp(8px, 1.5vw, 16px);
+  padding: clamp(10px, 2vw , 22px);  
   word-wrap: break-word;
   position: relative;
 }
@@ -47,13 +46,12 @@ body {
   content: "";
   background-image: radial-gradient(red 50%, black 100%);
   box-shadow: 0 2px 3px rgba(0,0,0,.25);
-  padding: 1vw;
+  padding: clamp(5px, 0.7vw, 12px);
   position: absolute;
-  top: -10px;
+  top: -4%;
   left: 50%;
   border-radius: 100%;
   transform: translateX(-50%);
-  font-size: 2em;
   pointer-events: none;
 }
 
@@ -66,9 +64,23 @@ body {
   margin: 0;
 }
 
+a.add{
+  position: absolute;
+  bottom: 100px;
+  color: white;
+  padding: 0.7vw;
+  font-size: 1.4vw;
+  border-radius: 1vw;
+  background-color: rgb(0, 140, 255);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.39);
+}
 .thanks {
   position:absolute;
   bottom:0;
-  width:100%;
+  max-width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.39);
+  padding: 10px 30px;
   text-align: center;
 }

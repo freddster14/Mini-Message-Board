@@ -1,11 +1,13 @@
 <html>
-  <head>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel="stylesheet" href="/index.css">
   </head>
   <body>
     <div class="content">
-      <% for (let i = messages.length - 1; i > 0; i--) { %>
+      <% for (let i = messages.length - 1; i > -1; i--) { %>
         <a href="open/<%= i %>">
           <div class="note" onclick="">
             <h2><%= messages[i].user %></h2>
@@ -13,7 +15,7 @@
           </div>
         </a>
       <% } %>
-    <a href="/new">Add Message</a>
+    <a href="/new" class="add">ADD MESSAGE</a>
     </div>
     <p class="thanks">Image by 
       <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=102071"> 

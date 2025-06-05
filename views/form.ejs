@@ -1,8 +1,8 @@
 <form method="POST" action="/new">
    <h2>Create your message</h2>
    <label for="name">Name:</label>
-   <input type="text" name="messageUser" id="name">
+   <input type="text" name="messageUser" id="name" maxlength="10">
    <label for="message">Message:</label>
-   <input type="text" name="messageText" id="message">
+   <input type="text" name="messageText" id="message" maxlength="125">
    <button type="submit">Submit</button>
 </form>

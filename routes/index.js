@@ -12,18 +12,18 @@ const messages = [
     user: 'Charles',
     added: new Date(),
   },
- 
 ];
 
 indexRouter.get('/', (req, res) => res.render('index', { title: 'Mini Messageboard', messages }));
 indexRouter.get('/new', (req, res) => res.render('form'));
 indexRouter.get('/open/:user', (req, res) => {
   const { user } = req.params;
-  res.render('message', { message: messages[user]});
+  res.render('message', { message: messages[user] });
 });
 
 indexRouter.post('/new', (req, res) => {
-  messages.push({ text: req.body.messageText, user: req.body.messageUser, added: new Date() });
+  const text = req.body.messageText;
+  messages.push({ text: text.toLowerCase(), user: req.body.messageUser, added: new Date() });
   res.redirect('/');
 });
 
