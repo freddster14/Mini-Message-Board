@@ -4,11 +4,16 @@ body {
 
 h1 {
   text-align: center;
+  position: relative;
+  top:  clamp(50px, 25vw, 300px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(400px, 80%);
 }
 
 .note {
   left: 50%;
-  top: 40%;
+  top: clamp(50px, 25vw, 300px);
   transform: translate(-50%, -50%) scale(1.7);
   display: flex;
   flex-direction: column;
@@ -16,4 +21,5 @@ h1 {
 
 .note .date {
   margin-top: auto;
+  width: 80%;
 }
