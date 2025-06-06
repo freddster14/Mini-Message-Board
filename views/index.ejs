@@ -22,7 +22,7 @@
         <% } else { %>
           <div></div>
         <% } %>
-        <% if (notes.length === 12) { %>
+        <% if (page < totalPages) { %>
           <a href="/?page= <%= page + 1 %>" class="next">Next...</a>
         <% } %>
       </div>
