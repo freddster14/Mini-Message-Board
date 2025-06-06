@@ -2,17 +2,17 @@
   <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>Mini-Messageboard</title>
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/index.css">
   </head>
   <body>
     <div class="content">
-      <% for (let i = messages.length - 1; i > -1; i--) { %>
-        <a href="open/<%= i %>">
-          <div class="note" id="color<%= messages[i].color %>">
-            <h2><%= messages[i].user %></h2>
-            <p><%= messages[i].text %></p>
+      <% for (let i = notes.length - 1; i > -1; i--) { %>
+        <a href="open/?user=<%= notes[i].id %>">
+          <div class="note" id="color<%= notes[i].color %>">
+            <h2><%= notes[i].user %></h2>
+            <p><%= notes[i].text %></p>
           </div>
         </a>
       <% } %>
