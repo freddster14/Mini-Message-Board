@@ -10,7 +10,7 @@ body {
 }
 
 .note {
-  width: clamp(75px, 15vw, 150px);
+  width: clamp(60px, 15vw, 150px);
   aspect-ratio: 1 / 1;
   background-color: #fff8a6;
   display: inline-block;

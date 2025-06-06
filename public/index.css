@@ -6,12 +6,12 @@
   display: flex;
   max-width: 700px;
   width: 82%;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: min(10vw, 100px);
   gap: 8%;
-  row-gap: 3vw;
+  row-gap: 2vw;
 }
 
 .content a {
@@ -21,11 +21,9 @@
   text-decoration: none;
 }
 
-
-
 a.add{
   position: absolute;
-  bottom: 100px;
+  top: min(115vw, 88%);
   color: white;
   left: 50%;
   transform: translateX(-50%);
@@ -37,11 +35,31 @@ a.add{
 }
 .thanks {
   position:absolute;
-  bottom:0;
+  bottom: -10px;
   max-width: fit-content;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.39);
   padding: 10px 30px;
   text-align: center;
+}
+
+.pagination {
+  top: min(115vw, 88%);
+  max-width: 700px;
+  width: 82%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+}
+
+a.next, a.prev {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.856);
+  border-radius: 0.7vw;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.39);
+  padding: 0.7vw;
+  font-size: clamp(12px, 2.5vw, 28px);
 }

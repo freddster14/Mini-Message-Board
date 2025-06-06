@@ -16,12 +16,16 @@
           </div>
         </a>
       <% } %>
-      <% if (notes.length === 12) { %>
-        <a href="/?page= <%= page + 1 %>">Next page...</a>
-      <% } %>
-      <% if (page !== 1) { %>
-        <a href="/?page= <%= page - 1 %>">Prev page...</a>
-      <% } %>
+      <div class="pagination">
+        <% if (page !== 1) { %>
+          <a href="/?page= <%= page - 1 %>" class="prev">Prev...</a>
+        <% } else { %>
+          <div></div>
+        <% } %>
+        <% if (notes.length === 12) { %>
+          <a href="/?page= <%= page + 1 %>" class="next">Next...</a>
+        <% } %>
+      </div>
     <a href="/new" class="add">ADD MESSAGE</a>
     </div>
     <p class="thanks">Image by 
