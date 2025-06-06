@@ -104,9 +104,12 @@ function getNote(user) {
 }
 
 function addNote(note) {
-  note.id = notes.length;
-  note.added = new Date().toLocaleString();
-  notes.push(note);
+  const newNote = {
+    ...note,
+    id: notes.length,
+    added: new Date().toLocaleString(),
+  };
+  notes.push(newNote);
 }
 module.exports = {
   notes, getNotesPage, getNote, addNote,
