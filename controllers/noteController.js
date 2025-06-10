@@ -1,5 +1,7 @@
 const { Router } = require('express');
-const { getNotesPage, getNote, addNote, getTotalPages } = require('../model/noteModal');
+const {
+  getNotesPage, getNote, addNote, getTotalPages,
+} = require('../model/noteModal');
 
 const newNoteRouter = Router();
 

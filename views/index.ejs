@@ -17,13 +17,13 @@
         </a>
       <% } %>
       <div class="pagination">
-        <% if (page !== 1) { %>
-          <a href="/?page= <%= page - 1 %>" class="prev">Prev...</a>
+        <% if (page !== 1 ) { %>
+          <a href="/?page=<%= page - 1 %>" class="prev">Prev...</a>
         <% } else { %>
           <div></div>
         <% } %>
         <% if (page < totalPages) { %>
-          <a href="/?page= <%= page + 1 %>" class="next">Next...</a>
+          <a href="/?page=<%= page + 1 %>" class="next">Next...</a>
         <% } %>
       </div>
     <a href="/new" class="add">ADD MESSAGE</a>
