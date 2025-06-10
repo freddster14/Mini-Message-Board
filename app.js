@@ -13,4 +13,4 @@ app.use(express.static(assestsPath));
 app.use(express.urlencoded({ extended: true }));
 app.use('/', indexRouter);
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+app.listen(PORT);
