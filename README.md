@@ -1,4 +1,4 @@
-# CV/Resume Application
+# Mini-Message-Board
 Live Preview: [Click Here](https://mini-message-board-3tug.onrender.com/)
 
 ## Technologies Used
