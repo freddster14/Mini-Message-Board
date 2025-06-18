@@ -14,7 +14,7 @@ async function getTotalPages(limit = 12) {
 }
 
 async function getNote(id) {
-  const { rows } = await pool.query("SELECT id, username, TO_CHAR(added, 'Mon DD, YYYY HH12:MI AM TZ') added, color FROM notes WHERE id = $1", [id]);
+  const { rows } = await pool.query('SELECT * FROM notes WHERE id = $1', [id]);
   return rows[0];
 }
 
