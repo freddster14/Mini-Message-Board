@@ -8,10 +8,10 @@
   </head>
   <body>
     <div class="content">
-      <% for (let i = notes.length - 1; i > -1; i--) { %>
+      <% for (let i = 0; i < notes.length; i++) { %>
         <a href="open/?user=<%= notes[i].id %>">
           <div class="note" id="color<%= notes[i].color %>">
-            <h2><%= notes[i].user %></h2>
+            <h2><%= notes[i].username %></h2>
             <p><%= notes[i].text %></p>
           </div>
         </a>
