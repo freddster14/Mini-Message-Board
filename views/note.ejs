@@ -10,7 +10,7 @@
     <div class="note" id="color<%= note.color %>">
       <h2><%= note.username%></h2>
       <p><%= note.text%></p>
-      <p class="date"><%= new Date(note.added).toLocaleString() %></p>
+      <p class="date" data-added="<%= note.added.toISOString() %>"></p>
     </div> 
     <h1>Click anywhere to redirect</h1>
 
@@ -18,6 +18,10 @@
       document.body.addEventListener('click', () => {
         window.location.href = '/';
       });
+      //Turn time into users' time zone
+      const date = document.querySelector('.date');
+      const iso = date.dataset.added;
+      date.textContent = new Date(iso).toLocaleString();
     </script>
   </body>
 </html>
